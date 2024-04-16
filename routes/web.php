@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\KienThucController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Cart;
 use App\Http\Livewire\Checkout;
@@ -31,7 +32,7 @@ Route::post('/dec-qty', [Cart::class, 'decQty'])->name('qty.down');
 Route::delete('/destroy-item', [Cart::class, 'destroyItem'])->name('destroy.item');
 Route::delete('/destroy-cart', [Cart::class, 'destroyCart'])->name('destroy.cart');
 Route::get('/cart', [Cart::class, 'render'])->name('cart');
-
+Route::get('/kienthuc/toan', [KienThucController::class, 'toan'])->name('kienthuc.index');
 Route::middleware('auth')->group(function () {
     Route::get('/checkout', [Checkout::class, 'render'])->name('checkout');
     Route::post('/checkout-order', [Checkout::class, 'makeOrder'])->name('checkout.order');
@@ -44,6 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/invoice/{order}', [Dashboard::class, 'invoice'])->name('invoice');
     Route::get('/dashboard/invoice/pdf/{order}', [Dashboard::class, 'invoicePdf'])->name('invoice.pdf');
     Route::get('/dashboard', [Dashboard::class, 'render'])->name('dashboard');
+
+
 });
 
 

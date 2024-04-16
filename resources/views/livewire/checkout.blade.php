@@ -66,8 +66,10 @@
                                 <tbody>
                                     @foreach (Cart::content() as $i)
                                         <tr>
-                                            <td class="image product-thumbnail"><img src="{{ asset('storage/'.$i->model->image) }}"
-                                                    alt="#">
+                                            <td class="image product-thumbnail">
+                                                <img src="{{ asset('assets/imgs/shop/'.$i->model->image.'.jpg') }}" >
+                                                {{-- <img src="{{ asset('storage/'.$i->model->image) }}"
+                                                    alt="#"> --}}
                                             </td>
                                             <td>
                                                 <h5><a

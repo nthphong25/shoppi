@@ -53,7 +53,7 @@
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="{{ route('product.details', $p->id) }}" class="">
-                                            
+
                                                     <img src="{{ asset('assets/imgs/shop/'.$p->image.'.jpg') }}" alt="product image">
 
                                             </a>
@@ -73,7 +73,7 @@
                                         <h2>
                                             <a href="{{ route('product.details', $p->id) }}"
                                                 class="text-xl">
-                                                {{ strlen($p->name) > 20 ? substr($p->name, 0, 17) . '...': $p->name }}
+                                                {{ strlen($p->name) > 20 ? substr($p->name, 0, 35) . '...': $p->name }}
                                             </a>
                                         </h2>
                                         <div class="flex items-center justify-between">

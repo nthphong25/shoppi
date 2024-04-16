@@ -25,8 +25,11 @@
                             @php
                                 $quantity += $item->quantity
                             @endphp
-                                <a href="{{ route('product.details', $item->product->id) }}"><img
-                                        src="{{ asset('storage/'.$item->product->image) }}" class="w-20 h-20 mr-4 rounded"></a>
+                                <a href="{{ route('product.details', $item->product->id) }}">
+                                    {{-- <img
+                                        src="{{ asset('storage/'.$item->product->image) }}" class="w-20 h-20 mr-4 rounded"> --}}
+                                        <img src="{{ asset('assets/imgs/shop/'.$item->product->image.'.jpg') }}" >
+                                    </a>
                             @endforeach
                         </td>
                         <td class="px-4 py-2">

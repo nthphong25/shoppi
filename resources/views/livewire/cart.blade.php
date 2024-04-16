@@ -27,8 +27,10 @@
                                             <td class="product-thumbnail ">
                                                 <a class="rounded-lg"
                                                     href="{{ route('product.details', $item->model->id) }}">
-                                                    <img src="{{ asset('storage/' . $item->model->image) }}"
-                                                        alt="{{ $item->model->name }}"></a>
+                                                    {{-- <img src="{{ asset('storage/' . $item->model->image) }}"
+                                                        alt="{{ $item->model->name }}"> --}}
+                                                        <img src="{{ asset('assets/imgs/shop/'.$item->model->image.'.jpg') }}" alt="{{ $item->model->name }}">
+                                                    </a>
                                             </td>
                                             <td class="">
                                                 <h5 class="text-lg font-medium ">

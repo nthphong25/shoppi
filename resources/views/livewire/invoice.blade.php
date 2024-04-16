@@ -41,7 +41,9 @@
                         <tr class="text-lg">
                             <td class="px-4 py-2">
                                 <a href="{{ route('product.details', $item->product->id) }}">
-                                    <img src="{{ asset('storage/'.$item->product->image) }}" class="w-40 h-40 mr-4 rounded">
+                                    {{-- <img src="{{ asset('storage/'.$item->product->image) }}" class="w-40 h-40 mr-4 rounded"> --}}
+                                    <img src="{{ asset('assets/imgs/shop/'.$item->product->image.'.jpg') }}" >
+
                                 </a>
                             </td>
                             <td class="px-4 py-2">
